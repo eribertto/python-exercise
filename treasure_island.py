@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 # Starting code for Level 2 Treasure Island project
+# Mission Encodeable practice exercise
+# https://missionencodeable.com/python/level/2/step/11
 
+# Todo: refine this code e.g. put this in a loop
 # This project will ask the user a series of questions as they navigate through a treasure island. However, if they make the wrong decision, they will meet an untimely end!
 
 # ASCII art to display to user
