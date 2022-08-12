@@ -7,8 +7,9 @@
 
 import random
 
+
 def guessing_game():
-    #method randint begins 0-99 excluding 100
+    # method randint begins 0-99 excluding 100
     answer = random.randint(0, 100)
     while True:
         user_guess = int(input('What is your guess? (numbers only) '))
@@ -19,6 +20,7 @@ def guessing_game():
             print(f'Your guess {user_guess} is too low!')
         else:
             print(f'Your guess {user_guess} is too high')
+
 
 guessing_game()
 # todo: sanitize for user inputs that are not numbers
