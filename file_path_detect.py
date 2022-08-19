@@ -28,8 +28,12 @@ except FileNotFoundError:
 # append mode using 'a'
 file_to_append_to = "/home/eribertto/alias.txt"
 append_msg = "This line is appended by Python script\n"
-with open(file_to_append_to, 'a') as file:
-    file.write(append_msg)
+try:
+	with open(file_to_append_to, 'a') as file:
+		file.write(append_msg)
+except FileNotFoundError:
+    print("That file was not found :-(")
+
 # view the appended file
 try:
     with open(file_to_append_to) as file:
