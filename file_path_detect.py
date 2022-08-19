@@ -7,6 +7,7 @@ import os
 # Python file detection
 
 path = "/home/eribertto/online-repos/python-exercise"
+afile = "/home/eribertto/online-repos/python-exercise/whatever.txt"
 
 if os.path.exists(path):
     print("The path exists!")
@@ -17,3 +18,21 @@ elif os.path.isdir(path):
 else:
     print("That location does not exist!")
 
+# reading a file
+try:
+    with open(afile) as file:
+        print(file.read())
+except FileNotFoundError:
+    print("That file was not found :-(")
+
+# append mode using 'a'
+file_to_append_to = "/home/eribertto/alias.txt"
+append_msg = "This line is appended by Python script\n"
+with open(file_to_append_to, 'a') as file:
+    file.write(append_msg)
+# view the appended file
+try:
+    with open(file_to_append_to) as file:
+        print(file.read())
+except FileNotFoundError:
+    print("That file was not found :-(")
