@@ -12,3 +12,5 @@ parser.add_argument('--sum', dest='accumulate', action='store_const', const=sum,
                     help='sum the integers (default: find the max)')
 args = parser.parse_args()
 print(args.accumulate(args.integers))
+
+# to run this program get python to call this script and provide arguments
