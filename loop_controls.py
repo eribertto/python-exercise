@@ -26,9 +26,11 @@
 #    print(i, end="")
 
 # pass 
+print('Using pass in a for loop')
 for i in range(1, 21):
     # skip unlucky number 13
     if i == 13:
+        print(f'skipping unlucky {i}!')
         pass
     else:
         print(i)
