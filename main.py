@@ -27,9 +27,10 @@ import typer
 #    typer.run(main)
 
 # a cli option with a def value e.g. blank or no value for lastname
+# use title Msr for combi of Miss and Sir aka gender-neutral title
 def main(name: str, lastname: str = "", formal: bool = False):
     if formal:
-        print(f"Good day Miss {name.title()} {lastname.title()}.")
+        print(f"Good day Msr {name.title()} {lastname.title()}.")
     else:
         print(f"Hello there {name} {lastname}.")
 
