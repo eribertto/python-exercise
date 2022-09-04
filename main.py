@@ -34,11 +34,6 @@ def main(name: str, lastname: str = "", formal: bool = False):
     If --formal is used, say hi very formally complete with genderless title and titlecase
     """
 
-    Args:
-        name (str): _description_
-        lastname (str, optional): _description_. Defaults to "".
-        formal (bool, optional): _description_. Defaults to False.
-    """
     if formal:
         print(f"Good day Msr {name.title()} {lastname.title()}.")
     else:
