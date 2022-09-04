@@ -6,9 +6,32 @@
 
 import typer
 
-def main(name: str): # arg name is type hinted to str
-    print(f"Hello there {name}!")
+# single argument
+#def main(name: str): # arg name is type hinted to str
+#    print(f"Hello there {name}!")
+
+# double arguments
+#def main(name: str, lastname: str): # arg name is type hinted to str
+#    print(f"Hello there {name} {lastname}, how are  you!")
+#if __name__ == "__main__":
+#    typer.run(main)
+
+# add one cli option --formal
+#def main(name: str, lastname: str, formal: bool = False):
+#    if formal:
+#        print(f"Good day Miss {name} {lastname}.")
+#    else:
+#        print(f"Hello there {name} {lastname}.")
+#
+#if __name__ == "__main__":
+#    typer.run(main)
+
+# a cli option with a def value e.g. blank or no value for lastname
+def main(name: str, lastname: str = "", formal: bool = False):
+    if formal:
+        print(f"Good day Miss {name.title()} {lastname.title()}.")
+    else:
+        print(f"Hello there {name} {lastname}.")
 
 if __name__ == "__main__":
     typer.run(main)
-
