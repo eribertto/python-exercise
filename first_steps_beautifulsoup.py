@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# beautifulsoup introduction & first steps
+# https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 html_doc = """<html><head><title>The Dormouse's story</title></head>
 <body>
