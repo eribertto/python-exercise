@@ -2,6 +2,9 @@
 # beautifulsoup introduction & first steps
 # https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
+import requests
+from bs4 import BeautifulSoup
+
 html_doc = """<html><head><title>The Dormouse's story</title></head>
 <body>
 <p class="title"><b>The Dormouse's story</b></p>
@@ -15,13 +18,26 @@ and they lived at the bottom of a well.</p>
 <p class="story">...</p>
 """
 
-from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_doc, 'html.parser')
-print(soup.prettify())
+#print(soup.prettify())
 
 # one common way of extracting all the URLs found within the page's <a> tags:
-for link in soup.find_all('a'):
-    print(link.get('href'))
+#for link in soup.find_all('a'):
+#    print(link.get('href'))
 
 # extracting all the text in the page
 print(soup.get_text())
+
+# another example guide
+# https://www.scrapingbee.com/blog/python-web-scraping-beautiful-soup/
+response = requests.get("https://www.warayblogger.com/2012/05/waray-songs-on-life-and-love.html")
+
+if response.status_code !=200:
+    print("Error fetching page!")
+    exit()
+else:
+    content =response.content
+print(content)
+#print(f'content type is {type(content)}')
+asoup =BeautifulSoup(content, 'html.parser')
+print(asoup.get_text())
