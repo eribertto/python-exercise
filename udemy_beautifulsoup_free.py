@@ -20,6 +20,15 @@ response = req.get(url, verify=False)
 data = response.text
 #print(data)		# prints the Parse tree html
 soup = bs(data, 'html.parser')
-tags = soup.find_all('a')
-for tag in tags:
-    print(tag.get('href'))
+#tags = soup.find_all('a')
+#for tag in tags:
+#    print(tag.get('href'))
+
+
+## the below codes are not printing the titles and the addresses!!!
+titles = soup.find_all("a", {"class":"result-title hdrlnk"})	# add hdrlnk
+for title in titles:
+    print(title.text)
+addresses = soup.find_all("span", {"class":"result-hood"})
+for address in addresses:
+    print(address.text)
