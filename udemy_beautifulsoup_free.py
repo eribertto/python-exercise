@@ -28,7 +28,9 @@ for tag in tags:
 
 
 ## the below codes are not printing the titles and the addresses!!!
-titles = soup.find_all("a", {"class":"result-title hdrlnk"})	# add hdrlnk
+
+#titles = soup.find_all("a", {"class":"result-title hdrlnk"})	# add hdrlnk
+titles = soup.find_all("a", {"class":"result-title"})	
 for title in titles:
     print(title.text)
 addresses = soup.find_all("span", {"class":"result-hood"})
