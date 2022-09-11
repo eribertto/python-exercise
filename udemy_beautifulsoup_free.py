@@ -20,9 +20,11 @@ response = req.get(url, verify=False)
 data = response.text
 #print(data)		# prints the Parse tree html
 soup = bs(data, 'html.parser')
-#tags = soup.find_all('a')
-#for tag in tags:
-#    print(tag.get('href'))
+
+# tags are working fine e.g. printing links
+tags = soup.find_all('a')
+for tag in tags:
+    print(tag.get('href'))
 
 
 ## the below codes are not printing the titles and the addresses!!!
