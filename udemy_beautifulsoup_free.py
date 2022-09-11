@@ -13,3 +13,7 @@ import csv
 # - How to handle navigation links and move to *next* pages.
 # - How to save your scraped data into a CSV file.
 # - And finally, a quick overview about *other* popular web scraping frameworks.
+
+url = "https://boston.craiglist.org/search/sof"
+response = req.get(url)
+print(response)
