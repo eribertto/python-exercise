@@ -1,30 +1,15 @@
 #!/usr/bin/env python
-import requests
-from bs4 import BeautifulSoup
+import requests as req
+from bs4 import BeautifulSoup as bs
 import csv
 
-# following beautifulsoup tutorial for web scraping
-# https://www.geeksforgeeks.org/implementing-web-scraping-python-beautiful-soup/
+# This is the course outline of Free Udemy Web Scraping tutorial
+# https://www.udemy.com/course/web-scraping-python-tutorial/learn/practice/1086672#overview
 
-# URL = "https://www.geeksforgeeks.org/data-structures/"
-# r = requests.get(URL)
-# print(r)		# <Response [200]>
-
-# headers = {'User Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)"}
-# r = requests.get(URL, headers=headers)
-# content = r.content
-# print(type(content))	# <class 'bytes'>
-# print(content)
-
-# Parsing the html content
-# Note this will not run on online IDEs
-
-# Step 4 Searching and navigating through the parse tree
-URL = "https://www.warayblogger.com/2012/05/waray-songs-on-life-and-love.html"
-r = requests.get(URL)
-soup = BeautifulSoup(r.content, "html5lib")
-# check the object type and save as variable
-parse_tree = soup.prettify()
-print(parse_tree)  # this prints the parse tree e.g. the complete html page
-# how to save this file locally?
-print(type(soup))
+# - Python web scraping libraries you need for the course and how to install them.
+# - How to extract URLs from one webpage.
+# - How to extract other text data pieces from one webpage.
+# - How to crawl multiple webpages and extract data from each of them.
+# - How to handle navigation links and move to *next* pages.
+# - How to save your scraped data into a CSV file.
+# - And finally, a quick overview about *other* popular web scraping frameworks.
