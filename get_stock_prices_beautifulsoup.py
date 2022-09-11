@@ -11,7 +11,9 @@ url_of_page = 'https://finance.yahoo.com/quote/%5EIXIC/'
 def computequoteprice():
     url_requests = requests.get(url_of_page)
     soup_ocreate = bs(url_requests.text, 'lxml')
-	# note: class_ is used instead of class because the latter is a reserved word in Python
+    message = "the object variable soup_ocreate is type: "
+    print(message, type(soup_ocreate))
+    # note: class_ is used instead of class because the latter is a reserved word in Python
     quote_price = soup_ocreate.find('span', class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text
     return quote_price
 
