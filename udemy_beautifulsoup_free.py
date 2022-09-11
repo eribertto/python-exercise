@@ -15,5 +15,11 @@ import csv
 # - And finally, a quick overview about *other* popular web scraping frameworks.
 
 url = "https://boston.craiglist.org/search/sof"
-response = req.get(url)
-print(response)
+response = req.get(url, verify=False)
+#print(response)			# this gives warning InsecureRequestWarning: Unverified HTTPS... then the <Response [200]>
+data = response.text
+#print(data)		# prints the Parse tree html
+soup = bs(data, 'html.parser')
+tags = soup.find_all('a')
+for tag in tags:
+    print(tag.get('href'))
