@@ -19,7 +19,11 @@ def computequoteprice():
     User Agent	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 Safari/537.36
     '''
  
-    headers = {'User Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 Safari/537.36'}
+    # this header variable containing the string Linux is the offending line! Code fails so need to change header to contain windows
+    #headers = {'User Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 Safari/537.36'}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2810.1 Safari/537.36"
+    }
     url_requests = requests.get(url_of_page, headers=headers)
     print(url_requests)
     soup_ocreate = bs(url_requests.text, "lxml")
@@ -27,7 +31,7 @@ def computequoteprice():
     #    "span", class_="Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)"
     #).text
     # new code using the method find
-    quote_price = soup_ocreate.find("fin-streamer", attrs={"data-symbol": SYMBOL, "data-field": "regularMarketPrice"}).get_text()
+    quote_price = soup_ocreate.find("fin-streamer", attrs={"data-symbol": SYMBOL, "data-field": "regularMarketPrice"},).get_text()
     return quote_price
 print("Quote price = " + str(computequoteprice()))
 """
