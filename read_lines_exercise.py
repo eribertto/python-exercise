@@ -6,7 +6,8 @@
 # NOTE: use type hints to have better code completion
 
 # define the target file
-filename = "argparser.demo.py"
+#filename = "argparser.demo.py"
+filename = "symbols.txt"
 
 
 #with open(filename) as f:
@@ -17,7 +18,7 @@ filename = "argparser.demo.py"
 # making a list of lines
 with open(filename) as f:
     lines = f.readlines()
-    print(lines)  # this is type list
+    #print(lines)  # this is type list
     print("\nPrinting line by line:\n")
 
 for line in lines:
