@@ -1,0 +1,30 @@
+FDX	FedEx Corporation	158.94	-45.93	-22.42%
+AMZN	Amazon.com, Inc.	122.31	-3.97	-3.14%
+UPS	United Parcel Service, Inc.	177.79	-7.21	-3.90%
+NTLA	Intellia Therapeutics, Inc.	60.12	-8.46	-12.33%
+GETY	Getty Images Holdings, Inc.	11.03	-2.32	-17.41%
+YM=F	Mini Dow Jones Indus.-$5 Sep 22	30,640.00	-334.00	-1.08%
+GE	General Electric Company	66.01	-2.90	-4.21%
+ES=F	E-Mini S&P 500 Sep 22	3,865.75	-36.25	-0.93%
+SPY	SPDR S&P 500 ETF Trust	384.14	-4.38	-1.13%
+NQ=F	Nasdaq 100 Sep 22	11,813.75	-121.00	-1.01%
+AMPX	Kensington Capital Acquisition Corp. IV	13.09	+3.09	+30.90%
+AAOI	Applied Optoelectronics, Inc.	3.3000	+0.8000	+32.00%
+SQQQ	ProShares UltraPro Short QQQ	50.08	+1.94	+4.03%
+NCR	NCR Corporation	22.19	-6.92	-23.75%
+NTTCF	NetCents Technology Inc.	1.0000	0.0000	0.00%
+GOOGL	Alphabet Inc.	102.31	-0.60	-0.58%
+GOOG	Alphabet Inc.	103.31	-0.59	-0.57%
+CLEU	China Liberal Education Holdings Limited	1.2050	+0.2593	+27.42%
+AAPL	Apple Inc.	149.39	-2.98	-1.96%
+QQQ	Invesco QQQ Trust	287.26	-3.85	-1.32%
+UBER	Uber Technologies, Inc.	31.48	-1.65	-4.98%
+KNWN	Know Labs, Inc.	2.5300	0.0000	0.00%
+TQQQ	ProShares UltraPro QQQ	24.09	-1.00	-3.99%
+IP	International Paper Company	36.16	-3.52	-8.87%
+UVXY	ProShares Ultra VIX Short-Term Futures ETF	10.99	+0.59	+5.62%
+QTNT	Quotient Limited	0.2199	+0.0125	+6.03%
+XPO	XPO Logistics, Inc.	46.19	-3.29	-6.65%
+^VIX	CBOE Volatility Index	27.82	+1.55	+5.90%
+RBLX	Roblox Corporation	39.81	-3.69	-8.48%
+VOO	Vanguard 500 Index Fund	354.63	-4.05	-1.13%
