@@ -25,5 +25,5 @@ for line in lines:
     print(line.rstrip())
 
 # get each line as a list
-content_list = [line.strip() for line in lines]
-print(content_list)
+#content_list = [line.strip() for line in lines]
+#print(content_list)
