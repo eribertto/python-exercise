@@ -7,7 +7,7 @@
 
 # define the target file
 #filename = "argparser.demo.py"
-filename = "symbols.txt"
+filename: str = "symbols.txt"
 
 
 #with open(filename) as f:
@@ -19,9 +19,9 @@ filename = "symbols.txt"
 with open(filename) as f:
     lines = f.readlines()
     #print(lines)  # this is type list
-    print("\nPrinting line by line:\n")
+    #print("\nPrinting line by line:\n")
 
-stockname = 'aapl'.upper()
+stockname: str = 'aapl'.upper()
 for line in lines:
     #print(line.rstrip())
     if stockname in line:
