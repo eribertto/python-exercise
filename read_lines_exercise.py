@@ -21,10 +21,20 @@ with open(filename) as f:
     #print(lines)  # this is type list
     #print("\nPrinting line by line:\n")
 
-stockname: str = 'aapl'.upper()
+stockname = input("Enter the stock symbol: ")
+#stockname: str = 'aapl'.upper()
+stockname = stockname.upper()
 for line in lines:
     #print(line.rstrip())
     if stockname in line:
         print(f'{stockname} is available!')
+
+''' 
+# todo enhancements:
+sanitize for blank user input
+use re? for exact string match
+print price of symbol
+
+'''
      
 
