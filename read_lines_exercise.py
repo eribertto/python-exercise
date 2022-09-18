@@ -21,9 +21,10 @@ with open(filename) as f:
     #print(lines)  # this is type list
     print("\nPrinting line by line:\n")
 
+stockname = 'aapl'.upper()
 for line in lines:
-    print(line.rstrip())
+    #print(line.rstrip())
+    if stockname in line:
+        print(f'{stockname} is available!')
+     
 
-# get each line as a list
-#content_list = [line.strip() for line in lines]
-#print(content_list)
