@@ -1,19 +1,12 @@
 #!/usr/bin/env python
-
+#import re
 
 # reading lines of a file
 # page 187 of the book Python Crash Course 2ed PCC
 # NOTE: use type hints to have better code completion
 
 # define the target file
-#filename = "argparser.demo.py"
 filename: str = "symbols.txt"
-
-
-#with open(filename) as f:
-#    for line in f:
-#        # print(line)     # prints line with double spaces
-#        print(line.rstrip())  # strips the extra newlines
 
 # making a list of lines
 with open(filename) as f:
@@ -21,20 +14,24 @@ with open(filename) as f:
     #print(lines)  # this is type list
     #print("\nPrinting line by line:\n")
 
+# use regular expression re to split by words for each line
 stockname = input("Enter the stock symbol: ")
+if len(stockname) == 0:
+    print("Empty input is invalid!")
+    exit()
 #stockname: str = 'aapl'.upper()
 stockname = stockname.upper()
 for line in lines:
     #print(line.rstrip())
     if stockname in line:
-        print(f'{stockname} is available!')
+        words = line.split('\t')    # tab-separated lines, may not work with other escape seqs
+        price = words[2]
+        print(f'{stockname} price is {price}')
 
 ''' 
 # todo enhancements:
-sanitize for blank user input
-use re? for exact string match
-print price of symbol
+done: sanitize for blank user input
+done: use str split method for exact string match
+done: print price of symbol
 
 '''
-     
-
