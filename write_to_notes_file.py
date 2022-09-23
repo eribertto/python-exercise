@@ -8,12 +8,11 @@ filename: str = "/home/erimendz/note.txt"
 
 
 def get_choice():
-    choice = input("[A]dd or [D]elete todo?")
+    choice = input("[A]dd or [D]elete todo? ")
     if choice in ["a", "A"]:
         print("Do add function!")
     elif choice in ["d", "D"]:
         print(("Do delete function"))
-
 
 get_choice()
 
