@@ -42,8 +42,8 @@ def del_todo():
     with open(filename) as f:
        for line in f:
            if line_to_delete.lower()  in line.lower():
-               pass
-
+               print(f"You selected {line}")
+               print("This is todo")
 
 get_choice()
 
