@@ -3,6 +3,8 @@
 # this is my small script to ask user for todo note to input & append to the note.txt file
 # so it will get appended IRT in the notes desklet of cinnamon DE
 
+# NOTE: THIS IS A DESTRUCTIVE SCRIPT, IT DELETES LINES WITHOUT CONFIRMATION SO BEWARE
+
 # define the target file, must be absolute
 filename: str = "/home/erimendz/note.txt"
 #note_to_write = input("\nWhat todo task to add? ")
