@@ -6,6 +6,7 @@
 # define the target file, must be absolute
 filename: str = "/home/erimendz/note.txt"
 #note_to_write = input("\nWhat todo task to add? ")
+confirm_msg = "Proceed [N/y]?"
 
 def check_empty_input():
     note_to_write = input("\nWhat todo task to add? ")
@@ -18,7 +19,6 @@ def add_todo():
     #note_to_write = input("\nWhat todo task to add? ")
     print(("You selected Add"))
     check_empty_input()
-    confirm_msg = "Proceed [N/y]?"
     ask_confirm = input(confirm_msg)
     if ask_confirm in ["y", "Y"]:
         note_to_write = note_to_write.upper()
@@ -39,11 +39,20 @@ def get_choice():
 def del_todo():
     print(("You selected Delete"))
     line_to_delete = input("What todo task to delete? ")
+    breakpoint()
     with open(filename) as f:
-       for line in f:
-           if line_to_delete.lower()  in line.lower():
-               print(f"You selected {line}")
-               print("This is todo")
+        lines = f.readlines()       # this is a list
+    with open(filename, "w") as f:
+        for line in lines:
+            if line.strip("\n").lower() != line_to_delete.lower():
+                f.write(line)
+                
+        #print(type(lines))
+#       for line in f:
+#           if line_to_delete.lower()  in line.lower():
+#               print("This line will be deleted: ", line)
+#               line.
+#               print("Done")
 
 get_choice()
 
