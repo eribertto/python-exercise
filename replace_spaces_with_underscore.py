@@ -4,8 +4,15 @@
 # https://stackoverflow.com/questions/12314285/how-do-i-remove-spaces-from-all-the-filename-names-in-the-current-directory
 
 import os
+import sys
 
-print("This script will strips spaces from filemes in the current directory")
+message = (
+    "This script will strip spaces from filenames in the current directory. Proceed? "
+)
+confirm = input(message)
+if confirm.lower() not in ["y", "yes", "yeah"]:
+    print("Bye!")
+    sys.exit()
 
 
 def main():
