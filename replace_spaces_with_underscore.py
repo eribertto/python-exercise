@@ -6,9 +6,7 @@
 import os
 import sys
 
-message = (
-    "This script will strip spaces from filenames in the current directory. Proceed? "
-)
+message = "This script will replace spaces with underscore from filenames in the current directory. Proceed? "
 confirm = input(message)
 if confirm.lower() not in ["y", "yes", "yeah"]:
     print("Bye!")
