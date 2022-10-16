@@ -38,7 +38,10 @@ class Car:
         self.odometer_reading += miles
 
 
-my_used_car = Car("toyota", "hilux", 2018)
+make: str = "toyota"
+model: str = "hilux"
+year: int = 2018
+my_used_car = Car(make, model, year)
 print(my_used_car.get_descriptive_name())
 my_used_car.update_odometer(23_500)
 my_used_car.read_odometer()
