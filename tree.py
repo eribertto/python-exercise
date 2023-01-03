@@ -1,6 +1,7 @@
 """
 Demonstrates how to display a tree of files / directories with the Tree renderable.
 """
+# https://www.freecodecamp.org/news/use-the-rich-library-in-python/
 
 import os
 import pathlib
