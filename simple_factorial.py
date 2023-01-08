@@ -14,4 +14,14 @@ def factorial(number):
     return number * factorial(number - 1)
 
 
-print(factorial(10))
+num = 10
+result = factorial(num)
+print(f"the factorial of {num} is {result}")
+
+msg = "looping through a range"
+print(msg)
+for i in range(1, 11):
+    if i % 2 == 0:
+        print(f"{i} is even")
+    else:
+        print(f"{i} is odd")
