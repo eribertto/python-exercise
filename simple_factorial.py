@@ -5,12 +5,13 @@
 
 
 def factorial(number):
-    if number == 1:
+    if number == 1 or number == 0:
         # base case
         return 1
-    else:
-        # recursive case
-        return number * factorial(number - 1)
+    if number < 0:
+     return -1
+    # recursive case
+    return number * factorial(number - 1)
 
 
-print(factorial(5))
+print(factorial(10))
