@@ -32,3 +32,11 @@ def multiply_list_contents(my_list):
 # call the function
 multiply_list_contents(num_list)
 print("New list: ", num_list)
+
+# for loop to check what value is greater than 10
+flt_list = [2.5, 16.42, 10.77, 8.3, 34.21]
+count = 0	# temp counter
+for num in flt_list:
+    if num > 10:
+        count += 1	# add to new list
+print(count)
