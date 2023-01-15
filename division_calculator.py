@@ -3,10 +3,13 @@ print("Enter 'q' to quit.")
 
 while True:
     first_number = input("\nFirst number(or q to quit): ")
-    if first_number == 'q' or not first_number:
+    if first_number == "q" or not first_number or first_number.isdigit() == False:
+        print("Bye")
         break
     second_number = input("\nSecond number(or q to quit): ")
-    if second_number == 'q' or not second_number:
+    if second_number == "q" or not second_number or second_number.isdigit() == False:
+        # if second_number == 'q' or not second_number:
+        print("Bye")
         break
     try:
         answer = int(first_number) / int(second_number)
@@ -14,3 +17,10 @@ while True:
         print("You can't divide by 0!")
     else:
         print(answer)
+
+"""
+pseudo code:
+if input is q or Q, print bye
+if input is empty, print bye
+if input is not a digit, print bye
+"""
