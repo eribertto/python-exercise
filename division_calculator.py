@@ -4,19 +4,20 @@ print("Enter 'q' to quit.")
 while True:
     first_number = input("\nFirst number(or q to quit): ")
     if first_number == "q" or not first_number or first_number.isdigit() == False:
-        print("Bye")
+        print("Invalid first input, goodbye for now!")
         break
     second_number = input("\nSecond number(or q to quit): ")
     if second_number == "q" or not second_number or second_number.isdigit() == False:
         # if second_number == 'q' or not second_number:
-        print("Bye")
+        # print("Bye")
+        print("Invalid second input, goodbye for now!")
         break
     try:
         answer = int(first_number) / int(second_number)
     except ZeroDivisionError:
         print("You can't divide by 0!")
     else:
-        print(answer)
+        print(f"the answer is {answer}")
 
 """
 pseudo code:
